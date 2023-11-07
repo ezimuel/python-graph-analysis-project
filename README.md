@@ -1,4 +1,4 @@
-## A graph analysis of collaborations in Python open source community using GitHub
+# A graph analysis of collaborations in Python open source community using GitHub
 
 This is the project done by [Enrico Zimuel](https://github.com/ezimuel/) for the course Graph Algorithms
 of the Prof. [Stefano Guarino](https://www.iac.cnr.it/personale/stefano-guarino) in the [Master Data Analytics](https://master-data-analytics.it/) postgraduated course at the University of Roma Tre (Italy).
@@ -6,7 +6,7 @@ of the Prof. [Stefano Guarino](https://www.iac.cnr.it/personale/stefano-guarino)
 The goal is to study the collaborations between Python open source projects using the
 data stored in github.com.
 
-# Configure the Github API token
+## Configure the Github API token
 
 We used the Github REST API and GraphQL API for retrieving all the information.
 That means you need to use an API token provided by Github. You can create a new access token
@@ -19,7 +19,7 @@ env variable, as follows:
 export GITHUB_TOKEN="insert here the access token"
 ```
 
-# Virtual environment and dependencies
+## Virtual environment and dependencies
 
 The first time you need to install the dependencies, we suggest to use a [virtual environment](https://docs.python.org/3/library/venv.html)
 using the following commands:
@@ -47,7 +47,7 @@ You can deactivate the virtual enviroment with following command:
 deactivate
 ```
 
-# Extract the repository from Github
+## Extract the repository from Github
 
 We extracted the top 1000 Python repositories with more than 5k stars using GraphQL.
 
@@ -59,7 +59,7 @@ python repositories.py
 
 This will create a [data/repositories.json](data/repositories.json) file.
 
-# Extract the contributors for each repository
+## Extract the contributors for each repository
 
 For each repository we need to extract the top 300 contributors.
 This is done using the `contributors.py` script, running the following command:
@@ -71,7 +71,7 @@ python contributors.py
 This command will create 1000 csv files in the `data`` folder with the top 300
 contributors for each repository.
 
-# Create the graph model
+## Create the graph model
 
 Finally, we have all the informations for creating the graph model.
 
@@ -98,11 +98,11 @@ Below is reported a visualization of the graph model done with [Gephi](https://g
 ![Visualization of the graph model](graph_gephi.png)
 
 
-# The analysis of the model
+## The analysis of the model
 
 The graph model has been analyzed using the jupyter file [analysis.ipynb].
 
-# Copyright
+## Copyright
 
 The author of this software is [Enrico Zimuel](https://github.com/ezimuel/).
 
